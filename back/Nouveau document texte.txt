@@ -1,1 +1,0 @@
-mongoexport --uri mongodb+srv://OsaKanjozoku:TgYrUkoYClD95BD5@groupomania.n4idpuk.mongodb.net/Groupomania --type csv --out bdd.json
