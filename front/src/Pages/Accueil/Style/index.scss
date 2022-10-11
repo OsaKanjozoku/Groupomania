@@ -1,0 +1,133 @@
+$color-primary : #FD2D01;
+$color-secondary : #FFD7D7;
+$color-tertiary : #4E5166;
+
+html{
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+
+}
+
+body{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+.article{
+    margin: 100px auto 50px auto;
+    border: 5px solid $color-tertiary;
+    border-radius: 20px;
+    padding: 10px;
+    width: 50%;
+     h1, p, label{
+        text-align: center;
+    }
+    label{
+        text-decoration: underline;
+        text-underline-offset: 2px;
+        margin-bottom: 5px;
+    }
+    p{
+        font-size: large;
+        font-style: italic;
+    }
+     .cancel-button{
+        box-sizing: border-box;
+        border: 2px solid $color-tertiary;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        height: 40px;
+        width: 40px;
+        margin-bottom: 20px;
+        transition: all .3s linear;
+        &:hover{
+            transform: scale(1.1);
+            background-color: $color-tertiary;
+            color: white;
+            .fa-rotate-left{
+                transform: rotate(-1turn);
+            }
+        }
+        .fa-rotate-left{
+            transition: all .5s;
+        }
+    }
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .input{
+        border: 1px solid $color-tertiary;
+        border-radius: 20px;
+        margin: auto;
+        width: 250px;
+        height: 25px;
+        text-align: center;
+        &:hover{
+            border: 1px solid black;
+        }
+    }
+    .Submit{
+        margin: auto;
+        border: 2px solid $color-tertiary;
+        border-radius: 20px;
+        padding: 5px 10px;
+        font-size: large;
+        margin-bottom: 30px;
+        margin-top: 20px;
+        transition: all .3s linear;
+        &:hover{
+            transform: scale(1.2);
+            box-shadow: 2px 2px 5px $color-primary;
+        }
+    }
+}
+
+
+#Buttons{
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 100%;
+    margin-top: 250px;
+    .affichageForm{
+        display: flex;
+        margin: auto;
+        font-size: large;
+        border-radius: 50px;
+        padding: 10px 15px;
+        font-weight: bold;
+        transition: all .3s linear;
+        &:hover{
+            transform: scale(1.1);
+            filter: brightness(0.8);
+        }
+    }
+}
+
+.message{
+    font-weight: bold;
+    color: $color-primary;
+}
+
+@media screen and (max-width: 768px) {
+    .article{
+        width: 90%;
+    }
+
+    .form{
+        .input{
+            width: 90%;
+        }
+    }
+}

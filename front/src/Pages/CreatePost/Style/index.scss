@@ -1,0 +1,93 @@
+$color-primary : #FD2D01;
+$color-secondary : #FFD7D7;
+$color-tertiary : #4E5166;
+
+.uploadPost{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    & h1 {
+        margin: 30px auto;
+    }
+}
+
+.uploadInput{
+    display: block;
+    text-align: center;
+    width: 800px;
+    height: 500px;
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 18px;
+    margin: auto;
+    border: 2px solid $color-tertiary;
+    border-radius: 10px;
+    overflow-wrap: break-word;
+}
+
+.submitPost, #submitPost__label{
+    display: flex;
+    margin: 20px auto;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 18px;
+    i{
+        transition: all .5s .2s;
+        margin-left: 5px;
+    }
+    background-color: $color-secondary;
+    border : 2px solid $color-tertiary;
+    &:hover{
+        background-color: $color-tertiary;
+        color: white;
+        .fa-image{
+            transform: rotate(30deg);
+        }
+        .fa-upload{
+            transform: scale(1.1);
+        }
+    }
+}
+
+.inputFile{
+    display: flex;
+}
+
+#submitPost__input, #submitPost__delete{
+    display: none;
+}
+
+
+.message{
+    display: flex;
+    margin: auto;
+    font-size: 30px;
+}
+
+.preview{
+    margin-top: 30px;
+    border: 2px solid $color-tertiary;
+    background-color: $color-secondary;
+    border-radius: 50px;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 280px;
+    width: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .uploadPost{
+        h1{
+            font-size: 22px;
+        }
+    }
+    .uploadInput{
+        width: 95%;
+        height: 250px;
+    }
+    .preview{
+        width: 95%;
+        height: auto;
+    }
+}
+
