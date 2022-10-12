@@ -89,17 +89,14 @@ function Posts() {
     let id = post._id;
 
     // eslint-disable-next-line
-    let result = await fetch(
-      "http://localhost:3001/groupomania/posts/admin/" + id,
-      {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-          Authorization: `${token}`,
-        },
-      }
-    );
+    let result = await fetch("http://localhost:3001/groupomania/posts/" + id, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        Authorization: `${token}`,
+      },
+    });
     try {
       const response = await fetch("http://localhost:3001/groupomania/posts", {
         headers: {
@@ -236,7 +233,9 @@ function Posts() {
               <div className="buttons">
                 <button
                   className="buttons__button"
-                  onClick={(e) => modify(e, post)}
+                  onClick={(e) => {
+                    modify(e, post);
+                  }}
                 >
                   <i class="fa-solid fa-pencil"></i>
                 </button>
@@ -276,7 +275,9 @@ function Posts() {
               <div className="buttons">
                 <button
                   className="buttons__button"
-                  onClick={(e) => modify(e, post)}
+                  onClick={(e) => {
+                    modify(e, post);
+                  }}
                 >
                   <i class="fa-solid fa-pencil"></i>
                 </button>
@@ -333,7 +334,9 @@ function Posts() {
                 <div className="buttons">
                   <button
                     className="buttons__button"
-                    onClick={(e, post) => modify(e, post)}
+                    onClick={(e) => {
+                      modify(e, post);
+                    }}
                   >
                     <i class="fa-solid fa-pencil"></i>
                   </button>
@@ -373,7 +376,9 @@ function Posts() {
                 <div className="buttons">
                   <button
                     className="buttons__button"
-                    onClick={(e, post) => modify(e, post)}
+                    onClick={(e) => {
+                      modify(e, post);
+                    }}
                   >
                     <i class="fa-solid fa-pencil"></i>
                   </button>
